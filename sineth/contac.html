@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolie Website</title>
+    <link rel="shortcut icon" type="y-icon" href="images/logo9.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e139144c6a.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+</head>
+
+
+
+<body>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-189fef82-b165-430d-b987-8c3b08d71795"></div>
+
+    <!----------hero section statrt------->
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html" onclick="aboutusToggle()">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contac.html">Contact Us</a></li>
+            </ul>
+            <a href="#" class="btn">Subscribe</a>
+        </nav>
+
+        <div class="contac">
+            <form class="contac-form" onsubmit="sendEmail(); reset(); return false;">
+                <h1>Contact <span>Us</span></h1>
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email id" required>
+                <input type="text" id="phone" placeholder="phone Number" required>
+                <textarea name="message" rows="4" placeholder="How Can We Help You?"></textarea>
+                <button type="submit">Send</button>
+
+                <br><br>
+                <div class="social">
+                    <a href="https://www.facebook.com/profile.php?id=100086166321782"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sine__th_22/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/0705089955"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://vi.me/0705089955"><i class="fa-brands fa-viber"></i></a>
+                    <a href="https://www.linkedin.com/in/sineth-mashenka-113122241/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "sinethmashenka1222@gmail.com",
+                Password : "31404B95123AAEA7FCBF34C629B14FF914A0",
+                To : 'sinethmashenka1222@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enqury",
+                Body : "Name: " + document.getElementById("name").value
+                + "<br> Email: " + document.getElementById("email").value
+                + "<br> Phone no: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+
+            }).then(
+            message => alert("Message Sent Succesfully")
+            );
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
